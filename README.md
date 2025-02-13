@@ -10,8 +10,9 @@ Se buscar configurar permisos en un bucket de S3 utilizando IAM, asegurando acce
 		- `s3:ListBucket` sobre `arn:aws:s3:::bucket-lab-iam`
 		- `s3:GetObject` sobre `arn:aws:s3:::bucket-lab-iam/public/*`
 		- **No** permitir acceso a `bucket-lab-iam/private/*`
-3.  Se creó un grupo, se le asociaron dos usuarios de prueba y se le asignaron las políticas previamente creadas.
-4.  Se creo un rol específico para EC2 y se creó una instancia en EC2 para probar el rol y los permisos de las carpetas den el bucket.
+3.  Se creó un grupo, se le asociaron dos usuarios (usuario1 y usuario2) de prueba y se le asignaron las políticas previamente creadas.
+4.  Se creo un usuario con permisos de administrador(Admin3)
+5.  Se creo un rol específico para EC2 y se creó una instancia en EC2 para probar el rol y los permisos de las carpetas den el bucket.
 
 ------------
 
