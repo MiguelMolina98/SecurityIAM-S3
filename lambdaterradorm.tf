@@ -1,5 +1,9 @@
+provider "aws" {
+  region = "us-east-1" # Cambia la región según corresponda
+}
+
 resource "aws_iam_group" "lambda_readonly" {
-  name = "LambdaReadOnlyGroup"
+  name = "Lambda_Miguel"
 }
 
 resource "aws_iam_group_policy" "lambda_readonly_policy" {
@@ -39,7 +43,7 @@ resource "aws_iam_group_policy" "lambda_write_policy" {
 }
 
 resource "aws_iam_user" "usuario1" {
-  name = "usuario1"
+  name = "usuario1_lambda_miguel"
 }
 
 resource "aws_iam_user_group_membership" "readonly_membership" {
@@ -48,7 +52,7 @@ resource "aws_iam_user_group_membership" "readonly_membership" {
 }
 
 resource "aws_iam_user" "usuario2" {
-  name = "usuario2"
+  name = "usuario2_lambda_miguel"
 }
 
 resource "aws_iam_user_group_membership" "write_membership" {
